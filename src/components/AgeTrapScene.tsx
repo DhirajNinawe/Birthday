@@ -108,9 +108,6 @@ export const AgeTrapScene: React.FC<AgeTrapSceneProps> = ({ onSuccessAge }) => {
             onClick={handleSelect90}
             className="cursor-pointer group relative w-44 sm:w-48 p-6 rounded-2xl bg-gradient-to-b from-[#793D50]/40 via-[#21182B] to-[#793D50]/60 border-2 border-[#D6B47A] shadow-[0_0_30px_rgba(214,180,122,0.3)] hover:shadow-[0_0_45px_rgba(214,180,122,0.6)] hover:scale-105 active:scale-95 transition-all flex flex-col items-center justify-center"
           >
-            <div className="absolute -top-3 px-3 py-0.5 rounded-full bg-[#D6B47A] text-[#21182B] text-[10px] font-bold uppercase tracking-wider shadow-md">
-              Honest Truth ★
-            </div>
             <span className="text-4xl mb-1 group-hover:scale-110 transition-transform">
               👵
             </span>
