@@ -1,6 +1,6 @@
 {
-  "name": "A Decade of Becoming ❤️",
-  "description": "An interactive, personalized birthday surprise experience celebrating twenty years of memories, laughter, and becoming.",
+  "name": "Shinam's World ❤️",
+  "description": "A bespoke, highly interactive digital birthday experience made exclusively for Shinam celebrating 20 years of becoming.",
   "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -3,27 +3,31 @@
 @layer base {
   body {
     font-family: 'Outfit', sans-serif;
+    background-color: #21182B;
+    color: #FFF4E6;
   }
-  .font-signika {
-    font-family: 'Signika', sans-serif;
+  .font-serif-hero {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
   }
 }
 
-/* Room ambience transition */
-.ambient-night {
-  background-color: #050508;
-  transition: background-color 2.5s ease-in-out;
+/* Shinam's World Atmosphere */
+.ambient-dark-room {
+  background-color: #120c18;
+  transition: background-color 2s ease-in-out;
 }
 
-.ambient-lit {
-  background: radial-gradient(circle at 50% 25%, #2a1b18 0%, #120d14 60%, #08060a 100%);
-  transition: background 3s ease-in-out;
+.ambient-room-lit {
+  background: radial-gradient(circle at 50% 25%, #34223d 0%, #21182B 55%, #181120 100%);
+  transition: background 2.5s ease-in-out;
 }
 
-.ambient-party {
-  background: radial-gradient(circle at 50% 30%, #ffd6ba 0%, #fedac2 40%, #fbd5c6 70%, #f7c5be 100%);
-  animation: party-ambience 9s infinite alternate ease-in-out;
-  transition: background 3s ease-in-out;
+.ambient-grand-party {
+  background: radial-gradient(circle at 50% 30%, #3e223b 0%, #291b2e 50%, #1c1322 100%);
+  transition: background 2.5s ease-in-out;
 }
 
 @keyframes party-ambience {

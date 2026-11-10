@@ -1,11 +1,14 @@
-export type Scene =
+export type ShinamScene =
   | 'dark_room'
-  | 'music_intro'
-  | 'age_trap'
-  | 'cake_ceremony'
-  | 'cake_cut_cat'
-  | 'gift_box'
-  | 'poem_scrapbook'
+  | 'music_moment'
+  | 'age_prank'
+  | 'cake_candle'
+  | 'grand_wishing'
+  | 'cake_cat'
+  | 'shinam_run'
+  | 'reward_sketch'
+  | 'gift_open'
+  | 'poem_memories'
   | 'achievements'
   | 'final_blessing';
 
@@ -13,7 +16,7 @@ export interface PoemCardData {
   id: number;
   title: string;
   lines: string[];
-  photoCaption?: string;
+  photoCaption: string;
   accent: string;
 }
 
@@ -27,8 +30,8 @@ export const POEM_CARDS: PoemCardData[] = [
       "You've faced so much and overcome it all,",
       "And I couldn't be prouder of how far you've come.",
     ],
-    photoCaption: 'A journey of strength & grace',
-    accent: '#f59e0b',
+    photoCaption: 'A journey of battles, lessons & strength',
+    accent: '#D6B47A',
   },
   {
     id: 2,
@@ -39,8 +42,8 @@ export const POEM_CARDS: PoemCardData[] = [
       "I don't know how much of a difference I've made,",
       'But witnessing your growth has been a gift in itself.',
     ],
-    photoCaption: 'Every memory cherished',
-    accent: '#ec4899',
+    photoCaption: 'Witnessing your growth is a gift',
+    accent: '#D98C9A',
   },
   {
     id: 3,
@@ -52,7 +55,7 @@ export const POEM_CARDS: PoemCardData[] = [
       'A beautiful soul with a heart beyond compare.',
     ],
     photoCaption: 'A heart beyond compare',
-    accent: '#8b5cf6',
+    accent: '#F2C5AD',
   },
   {
     id: 4,
@@ -63,8 +66,8 @@ export const POEM_CARDS: PoemCardData[] = [
       'What makes me prouder is not just what you achieve,',
       'But your desire to discover all that you can be.',
     ],
-    photoCaption: 'Chasing the horizon',
-    accent: '#06b6d4',
+    photoCaption: 'Discovering all that you can be',
+    accent: '#D6B47A',
   },
   {
     id: 5,
@@ -75,8 +78,8 @@ export const POEM_CARDS: PoemCardData[] = [
       'But hearing you say you want to test your own potential,',
       'Makes me admire you a little more every time.',
     ],
-    photoCaption: 'Boundless hunger & fire',
-    accent: '#10b981',
+    photoCaption: 'Admiring your fire every single time',
+    accent: '#D98C9A',
   },
   {
     id: 6,
@@ -87,8 +90,8 @@ export const POEM_CARDS: PoemCardData[] = [
       "You'll always be that little, energetic sixteen-year-old",
       'In my eyes, even through your twenties and beyond.',
     ],
-    photoCaption: 'That bright, energetic smile',
-    accent: '#f43f5e',
+    photoCaption: 'Always that energetic sixteen-year-old',
+    accent: '#F2C5AD',
   },
   {
     id: 7,
@@ -97,8 +100,8 @@ export const POEM_CARDS: PoemCardData[] = [
       'Happy Birthday.',
       "Here's to another decade of becoming. ❤️",
     ],
-    photoCaption: 'To you, always.',
-    accent: '#e11d48',
+    photoCaption: 'Happy Birthday, Shinam.',
+    accent: '#D6B47A',
   },
 ];
 
@@ -112,23 +115,23 @@ export interface AchievementItem {
 
 export const ACHIEVEMENTS: AchievementItem[] = [
   {
-    stage: 'Class 10th',
+    stage: 'CLASS 10TH',
     score: '85%',
-    description: 'An achievement worth celebrating.',
+    description: 'One milestone conquered.',
     metricType: 'percentage',
     numericTarget: 85,
   },
   {
-    stage: 'Class 12th',
+    stage: 'CLASS 12TH',
     score: '71%',
-    description: 'Every chapter taught you something, and you kept moving forward.',
+    description: 'Another chapter completed.',
     metricType: 'percentage',
     numericTarget: 71,
   },
   {
-    stage: 'College',
+    stage: 'COLLEGE',
     score: '8.95 CGPA',
-    description: 'An absolutely remarkable performance. Look at you go!',
+    description: "A remarkable performance. And we're just getting started.",
     metricType: 'cgpa',
     numericTarget: 8.95,
   },

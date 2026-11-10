@@ -21,18 +21,18 @@ export const GiftBoxScene: React.FC<GiftBoxSceneProps> = ({ onOpenGift }) => {
   return (
     <div className="relative z-30 max-w-xl mx-auto px-4 py-8 flex flex-col items-center text-center select-none animate-fade-in">
       {/* Soft Cinematic Spotlight */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-400/20 rounded-full blur-3xl pointer-events-none animate-pulse" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#D6B47A]/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
 
       {/* Header text */}
       <div className="mb-8 space-y-2 relative z-10">
-        <span className="py-1 px-4 rounded-full bg-rose-500/10 border border-rose-400/30 text-rose-300 text-xs font-semibold tracking-wider uppercase">
-          The Main Surprise 💫
+        <span className="py-1 px-4 rounded-full bg-[#D6B47A]/15 border border-[#D6B47A]/30 text-[#D6B47A] text-xs font-semibold tracking-wider uppercase">
+          The Personal Gift 💫
         </span>
-        <h2 className="font-signika text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-200">
-          One last surprise...
+        <h2 className="font-serif-hero text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#D6B47A]">
+          "Shinam, there's still one more thing..."
         </h2>
-        <p className="text-slate-300 text-sm sm:text-base font-medium">
-          A personal token celebrating twenty unforgettable years.
+        <p className="text-[#FFF4E6]/85 text-base sm:text-lg font-serif-hero italic">
+          "Something that can't be collected with coins."
         </p>
       </div>
 
@@ -43,53 +43,40 @@ export const GiftBoxScene: React.FC<GiftBoxSceneProps> = ({ onOpenGift }) => {
           opening ? 'scale-125 opacity-90' : 'hover:scale-105 active:scale-95'
         }`}
       >
-        {/* Sparkle particles floating around */}
-        <div className="absolute -top-4 -left-4 text-amber-300 text-xl animate-bounce">
+        <div className="absolute -top-4 -left-4 text-[#D6B47A] text-xl animate-bounce">
           ✨
         </div>
         <div
-          className="absolute -bottom-2 -right-4 text-rose-300 text-xl animate-bounce"
+          className="absolute -bottom-2 -right-4 text-[#D98C9A] text-xl animate-bounce"
           style={{ animationDelay: '0.4s' }}
         >
           ✨
         </div>
-        <div
-          className="absolute top-1/2 -right-6 text-amber-200 text-lg animate-ping"
-          style={{ animationDelay: '0.8s' }}
-        >
-          ✨
-        </div>
 
-        {/* Gift Box Container with float sway */}
+        {/* Gift Box Container */}
         <div className="relative w-44 h-44 sm:w-52 sm:h-52 animate-bounce" style={{ animationDuration: '3.5s' }}>
-          {/* Box Lid with Silk Bow Ribbon */}
+          {/* Box Lid */}
           <div
-            className={`absolute top-0 inset-x-0 h-14 rounded-2xl bg-gradient-to-r from-rose-600 via-rose-500 to-rose-600 border-2 border-rose-300/80 shadow-2xl z-20 flex items-center justify-center transition-all duration-700 ${
+            className={`absolute top-0 inset-x-0 h-14 rounded-2xl bg-gradient-to-r from-[#793D50] via-[#8c475d] to-[#793D50] border-2 border-[#D6B47A]/80 shadow-2xl z-20 flex items-center justify-center transition-all duration-700 ${
               opening ? '-translate-y-16 rotate-12 opacity-0' : ''
             }`}
           >
-            {/* Horizontal Ribbon on Lid */}
-            <div className="w-8 h-full bg-gradient-to-r from-amber-300 via-amber-200 to-amber-400 shadow-md border-x border-amber-500/40" />
+            <div className="w-8 h-full bg-[#D6B47A] shadow-md border-x border-[#c4a166]" />
 
-            {/* Silk Bow Ties */}
+            {/* Silk Bow */}
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex items-center gap-1">
-              <div className="w-7 h-7 rounded-full bg-amber-300 border-2 border-amber-400 rotate-45 shadow-lg transform -translate-x-1" />
-              <div className="w-7 h-7 rounded-full bg-amber-300 border-2 border-amber-400 -rotate-45 shadow-lg transform translate-x-1" />
-              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-amber-400 shadow-md" />
+              <div className="w-7 h-7 rounded-full bg-[#D6B47A] border-2 border-[#c4a166] rotate-45 shadow-lg transform -translate-x-1" />
+              <div className="w-7 h-7 rounded-full bg-[#D6B47A] border-2 border-[#c4a166] -rotate-45 shadow-lg transform translate-x-1" />
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#D6B47A] shadow-md" />
             </div>
           </div>
 
           {/* Box Body */}
-          <div className="absolute bottom-0 inset-x-2 h-34 rounded-2xl bg-gradient-to-b from-rose-700 via-rose-600 to-rose-800 border-2 border-rose-400/60 shadow-2xl flex items-center justify-center overflow-hidden">
-            {/* Vertical Ribbon */}
-            <div className="w-8 h-full bg-gradient-to-r from-amber-300 via-amber-200 to-amber-400 border-x border-amber-500/40 shadow-inner" />
-
-            {/* Subtle box patterns */}
-            <div className="absolute inset-0 bg-radial from-white/10 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-2 h-34 rounded-2xl bg-gradient-to-b from-[#602d3d] via-[#4d2230] to-[#391723] border-2 border-[#D6B47A]/50 shadow-2xl flex items-center justify-center overflow-hidden">
+            <div className="w-8 h-full bg-[#D6B47A] border-x border-[#c4a166] shadow-inner" />
           </div>
 
-          {/* Box Base Shadow */}
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-5 bg-black/50 rounded-full blur-md" />
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-5 bg-black/60 rounded-full blur-md" />
         </div>
       </div>
 
@@ -98,10 +85,10 @@ export const GiftBoxScene: React.FC<GiftBoxSceneProps> = ({ onOpenGift }) => {
         <button
           onClick={handleClick}
           disabled={opening}
-          className="px-9 py-4 rounded-full bg-gradient-to-r from-amber-400 via-rose-400 to-amber-300 hover:from-amber-300 hover:to-rose-300 text-slate-950 font-signika font-bold text-lg sm:text-xl shadow-[0_0_35px_rgba(244,63,94,0.4)] hover:shadow-[0_0_50px_rgba(244,63,94,0.7)] hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5 cursor-pointer disabled:opacity-80"
+          className="px-10 py-4 rounded-xl bg-gradient-to-r from-[#D6B47A] via-[#D98C9A] to-[#D6B47A] hover:brightness-110 text-[#21182B] font-serif-hero font-extrabold text-lg sm:text-xl tracking-wider uppercase shadow-[0_10px_35px_rgba(214,180,122,0.4)] hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5 cursor-pointer disabled:opacity-80"
         >
-          <Sparkles className="w-5 h-5 text-slate-950" />
-          <span>{opening ? 'Unwrapping Memories...' : 'OPEN YOUR GIFT 🎁'}</span>
+          <Sparkles className="w-5 h-5 text-[#21182B]" />
+          <span>{opening ? 'Unwrapping Memories...' : 'OPEN YOUR GIFT'}</span>
         </button>
       </div>
     </div>

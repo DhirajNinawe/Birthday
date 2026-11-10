@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Heart, Sparkles, RotateCcw, PartyPopper } from 'lucide-react';
+import { Heart, RotateCcw, PartyPopper } from 'lucide-react';
 import { fireCelebrationConfetti, fireSideCannons } from '../utils/confetti';
 
 interface FinalBlessingSceneProps {
@@ -13,7 +13,6 @@ export const FinalBlessingScene: React.FC<FinalBlessingSceneProps> = ({
     fireCelebrationConfetti();
     fireSideCannons();
 
-    // Trigger intermittent gentle confetti fireworks every 6 seconds
     const interval = setInterval(() => {
       fireSideCannons();
     }, 6000);
@@ -23,56 +22,58 @@ export const FinalBlessingScene: React.FC<FinalBlessingSceneProps> = ({
 
   return (
     <div className="relative z-30 max-w-3xl mx-auto px-4 py-8 flex flex-col items-center text-center select-none animate-fade-in pb-16">
-      {/* Golden Aura Spotlight */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-amber-400/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
+      {/* Warm Golden Spotlight */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#D6B47A]/15 rounded-full blur-3xl pointer-events-none animate-pulse" />
 
       {/* Main Closing Ribbon */}
       <div className="mb-6 space-y-2 relative z-10">
-        <span className="py-1 px-5 rounded-full bg-amber-400/20 border border-amber-300/40 text-amber-300 text-xs font-bold tracking-widest uppercase">
+        <span className="py-1 px-5 rounded-full bg-[#D6B47A]/20 border border-[#D6B47A]/40 text-[#D6B47A] text-xs font-bold tracking-widest uppercase">
           A DECADE OF BECOMING ❤️
         </span>
-        <h2 className="font-signika text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-200 tracking-wide pt-2">
-          AND THAT'S A WRAP FOR TODAY!
+        <h2 className="font-serif-hero text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#D6B47A] tracking-wide pt-2">
+          AND THAT'S A WRAP FOR TODAY, SHINAM.
         </h2>
-        <p className="font-signika text-lg sm:text-xl text-rose-300 font-semibold">
-          Twenty years of memories, lessons, laughter and becoming.
-        </p>
-        <p className="text-amber-100 text-base sm:text-lg font-medium italic">
-          Here's wishing you an incredible 20th year ahead! ✨
+        <p className="font-serif-hero text-lg sm:text-xl text-[#D98C9A] font-semibold italic">
+          "Twenty years of memories, lessons, laughter and becoming."
         </p>
       </div>
 
       {/* BLESSINGS CARD */}
-      <div className="w-full bg-slate-900/80 backdrop-blur-xl border border-amber-400/30 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-4 text-slate-200 text-sm sm:text-base leading-relaxed text-center my-4 relative z-10">
-        <p className="transition-all hover:text-amber-200">
-          May the coming decade bring you opportunities bigger than your dreams.
+      <div className="w-full bg-[#21182B]/90 backdrop-blur-xl border-2 border-[#D6B47A]/40 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-4 text-[#FFF4E6] text-sm sm:text-base leading-relaxed text-center my-4 relative z-10 font-sans">
+        <p className="transition-all hover:text-[#D6B47A]">
+          "May the coming decade bring you opportunities bigger than your dreams."
         </p>
-        <p className="transition-all hover:text-amber-200">
-          May you discover abilities you never knew you possessed.
+        <p className="transition-all hover:text-[#D6B47A]">
+          "May you discover abilities you never knew you possessed."
         </p>
-        <p className="transition-all hover:text-amber-200">
-          May you achieve things that your younger self could only imagine.
+        <p className="transition-all hover:text-[#D6B47A]">
+          "May you achieve things your younger self could only imagine."
         </p>
-        <p className="transition-all hover:text-amber-200">
-          May you always retain that curiosity, kindness, forgiveness and determination that make you who you are.
+        <p className="transition-all hover:text-[#D6B47A]">
+          "May you always retain your curiosity, kindness, forgiveness and determination."
         </p>
-        <p className="transition-all hover:text-amber-200">
-          And most importantly, may you always find reasons to smile, grow and be proud of yourself.
+        <p className="transition-all hover:text-[#D6B47A]">
+          "And may you never stop exploring how much more you are capable of becoming."
         </p>
 
-        <div className="pt-4 border-t border-white/10">
-          <p className="font-signika font-bold text-lg sm:text-xl text-amber-300">
-            You deserve every beautiful thing that life has waiting for you.
-          </p>
-        </div>
+        {/* Grand Final Composition */}
+        <div className="pt-8 border-t border-[#D6B47A]/25 flex flex-col items-center space-y-3">
+          {/* Her Photograph in Golden Circular Vignette */}
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-[#D6B47A] via-[#D98C9A] to-[#D6B47A] shadow-xl">
+            <div className="w-full h-full rounded-full overflow-hidden bg-[#21182B]">
+              <img
+                src="/assets/aistudio/bd1_45088bb2.jpg"
+                alt="Shinam"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
-        {/* Grand Finale Signature */}
-        <div className="pt-6 flex flex-col items-center space-y-2">
-          <h1 className="font-signika font-extrabold text-3xl sm:text-4xl text-rose-400 flex items-center gap-2 justify-center">
-            <span>HAPPY BIRTHDAY!</span>
-            <Heart className="w-7 h-7 text-rose-500 fill-rose-500 animate-bounce" />
+          <h1 className="font-serif-hero font-extrabold text-3xl sm:text-5xl text-[#D6B47A] flex items-center gap-2 justify-center pt-2">
+            <span>HAPPY BIRTHDAY, SHINAM!</span>
+            <Heart className="w-8 h-8 text-[#D98C9A] fill-[#D98C9A] animate-bounce" />
           </h1>
-          <p className="font-signika text-lg sm:text-xl text-amber-200 font-semibold tracking-wide">
+          <p className="font-serif-hero text-lg sm:text-2xl text-[#FFF4E6] font-semibold tracking-wide">
             Here's to another decade of becoming. ❤️
           </p>
         </div>
@@ -85,18 +86,18 @@ export const FinalBlessingScene: React.FC<FinalBlessingSceneProps> = ({
             fireCelebrationConfetti();
             fireSideCannons();
           }}
-          className="px-6 py-3 rounded-full bg-slate-900/90 border border-slate-700 hover:bg-slate-800 text-slate-200 text-xs sm:text-sm font-semibold flex items-center gap-2 shadow-lg transition-all active:scale-95"
+          className="px-6 py-3 rounded-xl bg-[#21182B] border border-[#793D50] hover:bg-[#341d31] text-[#FFF4E6] text-xs sm:text-sm font-semibold flex items-center gap-2 shadow-lg transition-all active:scale-95 cursor-pointer"
         >
-          <PartyPopper className="w-4 h-4 text-rose-400" />
+          <PartyPopper className="w-4 h-4 text-[#D6B47A]" />
           <span>Blast More Confetti! 🎊</span>
         </button>
 
         <button
           onClick={onRestartExperience}
-          className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-rose-400 hover:from-amber-300 hover:to-rose-300 text-slate-950 font-signika font-bold text-xs sm:text-sm flex items-center gap-2 shadow-xl transition-all active:scale-95 cursor-pointer"
+          className="px-7 py-3 rounded-xl bg-gradient-to-r from-[#D6B47A] to-[#D98C9A] hover:brightness-105 text-[#21182B] font-serif-hero font-extrabold text-xs sm:text-sm tracking-wider uppercase flex items-center gap-2 shadow-xl transition-all active:scale-95 cursor-pointer"
         >
           <RotateCcw className="w-4 h-4" />
-          <span>Relive the Magic ↺</span>
+          <span>Relive the Experience ↺</span>
         </button>
       </div>
     </div>
