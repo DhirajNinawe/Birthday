@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', sans-serif;
+  }
+  .font-signika {
+    font-family: 'Signika', sans-serif;
+  }
+}
+
+/* Room ambience transition */
+.ambient-night {
+  background-color: #050508;
+  transition: background-color 2.5s ease-in-out;
+}
+
+.ambient-lit {
+  background: radial-gradient(circle at 50% 25%, #2a1b18 0%, #120d14 60%, #08060a 100%);
+  transition: background 3s ease-in-out;
+}
+
+.ambient-party {
+  background: radial-gradient(circle at 50% 30%, #ffd6ba 0%, #fedac2 40%, #fbd5c6 70%, #f7c5be 100%);
+  animation: party-ambience 9s infinite alternate ease-in-out;
+  transition: background 3s ease-in-out;
+}
+
+@keyframes party-ambience {
+  0% {
+    background: radial-gradient(circle at 50% 30%, #ffd8be 0%, #fed5c0 45%, #f6c8c0 100%);
+  }
+  33% {
+    background: radial-gradient(circle at 45% 25%, #ffe6c7 0%, #fdd9c8 50%, #f1c0be 100%);
+  }
+  66% {
+    background: radial-gradient(circle at 55% 35%, #ffd2ca 0%, #fec8c4 50%, #f7c0c8 100%);
+  }
+  100% {
+    background: radial-gradient(circle at 50% 30%, #ffd8be 0%, #fed5c0 45%, #f6c8c0 100%);
+  }
+}
+
+/* Banner entrance */
+@keyframes bannerDrop {
+  0% {
+    transform: translateY(-500px) rotate(-6deg) scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(15px) rotate(4deg) scale(1.05);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-8px) rotate(-2deg) scale(0.98);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-banner-drop {
+  animation: bannerDrop 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Balloon sway animations */
+@keyframes balloonSwayOne {
+  0%, 100% {
+    transform: rotate(6deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-6deg) translateY(-14px);
+  }
+}
+
+@keyframes balloonSwayTwo {
+  0%, 100% {
+    transform: rotate(-7deg) translateY(-8px);
+  }
+  50% {
+    transform: rotate(7deg) translateY(8px);
+  }
+}
+
+.balloon-sway-1 {
+  animation: balloonSwayOne 4.5s ease-in-out infinite;
+}
+
+.balloon-sway-2 {
+  animation: balloonSwayTwo 5.2s ease-in-out infinite;
+}
+
+/* Flame animation layers */
+@keyframes flameFlicker1 {
+  0%, 100% { transform: translateY(0) scale(1) rotate(-1deg); opacity: 0.95; }
+  50% { transform: translateY(-7px) scale(1.15, 0.85) rotate(2deg); opacity: 0.8; }
+}
+
+@keyframes flameFlicker2 {
+  0%, 100% { transform: translateY(0) scale(0.9) rotate(2deg); opacity: 0.9; }
+  50% { transform: translateY(-11px) scale(1.2, 0.75) rotate(-3deg); opacity: 0.7; }
+}
+
+.flame-anim-1 {
+  animation: flameFlicker1 0.45s ease-in-out infinite alternate;
+}
+
+.flame-anim-2 {
+  animation: flameFlicker2 0.3s ease-in-out infinite alternate;
+}
+
+/* Candle smoke on blow */
+@keyframes smokeRise {
+  0% {
+    opacity: 0.8;
+    transform: translateY(0) scale(0.6);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-30px) scale(1.2) translateX(6px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(1.8) translateX(-12px);
+  }
+}
+
+.animate-smoke {
+  animation: smokeRise 1.6s ease-out forwards;
+}
